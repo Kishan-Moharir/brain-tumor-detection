@@ -185,6 +185,14 @@ IMG_SIZE = 224
 DATASET_PATH = "dataset"
 MODEL_PATH = "model.h5"
 
+import gdown
+
+FILE_ID = "1RuIYg4imou1JzjRVowF-H4BJXgP2FIOF"
+
+if not os.path.exists(MODEL_PATH):
+    url = f"https://drive.google.com/uc?id={FILE_ID}"
+    gdown.download(url, MODEL_PATH, quiet=False)
+
 # ---------------------------------
 # LOAD DATA
 # ---------------------------------
